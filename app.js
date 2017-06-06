@@ -1,7 +1,8 @@
 'use strict';
-var child = prompt("Does Chris have chilren?")
-  if (child === yes) {
+var child = prompt('Does Chris have children?').toUpperCase();
+  if (child === 'YES' || child === 'Y') {
     alert("Correct!");
   }
-    else {alert("Incorrect!  Chris has one son.");
+    else {
+    alert('Incorrect!  Chris has one son.');
   }
