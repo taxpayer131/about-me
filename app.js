@@ -50,3 +50,13 @@ console.log("Answer to the question of whether or not Chris has IT exp is " + it
             alert('Incorrect!  Chris does not own a car.');
           }
 console.log("Answer to the question of Chris owning a car is " + car);
+
+//Sixth question
+        var guess = prompt('Guess a number.  You have four tries.');
+        var random = Math.floor(Math.random()*20);
+
+        if (random < guess) {
+            prompt("You've guessed too high! Guess again.");
+        } else if (random > guess) {
+            prompt("You've guessed too low! Guess again");
+        } else alert.log("You got it right, nice work!");
