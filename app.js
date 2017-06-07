@@ -53,10 +53,21 @@ console.log("Answer to the question of Chris owning a car is " + car);
 
 //Sixth question
         var guess = prompt('Guess a number.  You have four tries.');
-        var random = Math.floor(Math.random()*20);
+        var random = Math.floor(Math.random() * 20 + 1); // Generates a random number between 0 and 20
 
-        if (random < guess) {
-            prompt("You've guessed too high! Guess again.");
-        } else if (random > guess) {
-            prompt("You've guessed too low! Guess again");
-        } else alert.log("You got it right, nice work!");
+        if (guess = random);
+          alert('You got it - nice job!');
+
+        while (guess != random);
+        for(i = 0; i < 5; i++)      {
+            if(guess > random);
+            prompt('You guessed too high.  Guess again.');
+            else
+            prompt('You guessed too low.  Guess again.');
+        }
+
+
+
+        // var step;
+        // for (step = 0; step < 5; step++) {
+          // Runs 5 times, with values of step 0 through 4.
