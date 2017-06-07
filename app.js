@@ -3,71 +3,75 @@
 
 // first question
 var child = prompt('Does Chris have children?').toUpperCase();
-  if (child === 'YES' || child === 'Y') {
-    alert("Correct!");
-  }
-    else {
-    alert('Incorrect!  Chris has one son.');
-  }
+if (child === 'YES' || child === 'Y') {
+  alert("Correct!");
+}
+else {
+  alert('Incorrect!  Chris has one son.');
+}
 console.log("Answer to the question of having children is " + child);
 
 // second question
-  var marriage = prompt('Is Chris married?').toUpperCase();
-    if (marriage === 'YES' || marriage === 'Y') {
-      alert("Correct!");
-    }
-      else {
-      alert('Incorrect!  Chris is married.');
-    }
+var marriage = prompt('Is Chris married?').toUpperCase();
+if (marriage === 'YES' || marriage === 'Y') {
+  alert("Correct!");
+}
+else {
+  alert('Incorrect!  Chris is married.');
+}
 console.log("Answer to the question or being married or not is " + marriage);
 
 // third question
-    var dev = prompt('Does Chris want to be a developer?').toUpperCase();
-      if (dev === 'YES' || dev === 'Y') {
-        alert("Correct!");
-      }
-        else {
-        alert('Incorrect!  Chris is re-training himself to become a developer.');
-      }
+var dev = prompt('Does Chris want to be a developer?').toUpperCase();
+if (dev === 'YES' || dev === 'Y') {
+  alert("Correct!");
+}
+else {
+  alert('Incorrect!  Chris is re-training himself to become a developer.');
+}
 console.log("Answer to the question of Chris wanting to be a developer is " + dev);
 
 //fourth question
-      var it = prompt('Does Chris have experience in information technology (IT)?').toUpperCase();
-        if (it === 'YES' || it === 'Y') {
-          alert("Correct!");
-        }
-          else {
-          alert('Incorrect!  Chris has has extensive experience in IT.');
-        }
+var it = prompt('Does Chris have experience in information technology (IT)?').toUpperCase();
+if (it === 'YES' || it === 'Y') {
+  alert("Correct!");
+}
+else {
+  alert('Incorrect!  Chris has has extensive experience in IT.');
+}
 console.log("Answer to the question of whether or not Chris has IT exp is " + it);
 
 // fifth question
-        var car = prompt('Does Chris own a car?').toUpperCase();
-          if (car === 'NO' || car === 'N') {
-            alert("Correct!");
-          }
-            else {
-            alert('Incorrect!  Chris does not own a car.');
-          }
-console.log("Answer to the question of Chris owning a car is " + car);
+var car = prompt('Does Chris own a car?').toUpperCase();
+if (car === 'NO' || car === 'N') {
+  alert('Correct!');
+}
+else {
+  alert('Incorrect!  Chris does not own a car.');
+}
+console.log('Answer to the question of Chris owning a car is ' + car);
 
 //Sixth question
-        var guess = prompt('Guess a number.  You have four tries.');
-        var random = Math.floor(Math.random() * 20 + 1); // Generates a random number between 0 and 20
+var guess = prompt('Guess a number.  You have four tries.');
+var random = Math.floor(Math.random() * 20 + 1); // Generates a random number between 0 and 20
 
-        if (guess = random);
-          alert('You got it - nice job!');
+if (guess === random){ //this comparison checks the user's guess vs. the chosen number.
+  alert('You got it - nice job!');
+  console.log('The user correctly guessed the chosen number in the first attempt.');
+}
+else {
 
-        while (guess != random);
-        for(i = 0; i < 5; i++)      {
-            if(guess > random);
-            prompt('You guessed too high.  Guess again.');
-            else
-            prompt('You guessed too low.  Guess again.');
-        }
+  while (guess != random){
+    for(i = 0; i < 4; i++) {
+      if(guess > random) {
+        var guess = prompt('You guessed too high.  Guess again.');
+      } else {
+        var guess = prompt('You guessed too low.  Guess again.');
+      }
+    }
+  }
+}
 
-
-
-        // var step;
-        // for (step = 0; step < 5; step++) {
-          // Runs 5 times, with values of step 0 through 4.
+// var step;
+// for (step = 0; step < 5; step++) {
+// Runs 5 times, with values of step 0 through 4.
