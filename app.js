@@ -50,7 +50,8 @@
 //   alert('Incorrect!  Chris does not own a car.');
 // }
 // console.log('Answer to the question of Chris owning a car is ' + car);
-
+//
+//Sixth question
 var guess;
 var counter = 1;
 var correctNum = 4;
@@ -77,4 +78,3 @@ console.log('counter', counter);
 if (counter > 4) {
   alert('Sorry! His favorite number is ' + correctNum);
 }
-//Sixth question
