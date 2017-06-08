@@ -75,56 +75,93 @@ qFive();
 //Sixth question
 function qSix() {
   var guess;
-  var counter = 1;
+  var attempts = 4;
   var number = 4;
-  number = parseInt(prompt('What is Chris\'s favorite number between 0 and 20?'));
-  while (guess !== number && counter <= 4) {
-    console.log('number guess', number);
-    console.log('counter', counter);
 
-    if (number < number) {
+  while (attempts > 0) {
+    guess = parseInt(prompt('What is Chris\'s favorite number between 0 and 20?'));
+    console.log('number guess', guess);
+    console.log('attempts', attempts);
+
+    if (guess < number) {
       alert('Too low');
-      counter++;
-    } else if (number > number) {
+      attempts--;
+    } else if (guess > number) {
       alert('Too high');
-      counter++;
+      attempts--;
+    } else if (guess === 4) {
+      alert('That\'s right! You guessed it in ' + attempts + ' tries.');
+      attempts = -1;
     } else {
-      alert('That\'s right! You guessed it in ' + counter + ' tries.');
+      alert('Incorrect Answer, not even close!');
       scoreKeeper++;
+      attempts--;
       break;
     }
   }
-  console.log('counter', counter);
-  if (counter > 4) {
-    alert('Sorry! His favorite number is ' + number);
-  }
+  console.log('attempts', attempts);
+
 }
 qSix();
 
-//Seventh question
-var countries = ['india', 'belgium', 'france'];
-var guessesLeft = 6;
-var name = prompt('What is your name, please?');
+// //Sixth question
+// function qSix() {
+//   var guess;
+//   var counter = 1;
+//   var number = 4;
+//   number = parseInt(prompt('What is Chris\'s favorite number between 0 and 20?'));
+//   while (guess !== number && counter <= 4) {
+//     console.log('number guess', number);
+//     console.log('counter', counter);
+//
+//     if (number < number) {
+//       alert('Too low');
+//       counter++;
+//     } else if (number > number) {
+//       alert('Too high');
+//       counter++;
+//     } else {
+//       alert('That\'s right! You guessed it in ' + counter + ' tries.');
+//       scoreKeeper++;
+//       break;
+//     }
+//   }
+//   console.log('counter', counter);
+//   if (counter > 4) {
+//     alert('Sorry! His favorite number is ' + number);
+//   }
+// }
+// qSix();
 
-alert('Let\'s play a game.  Guess a country Chris has visited.');
-while (guessesLeft > 0) {
-  var ans = prompt('Take a guess.').toLowerCase();
-  for (var i = 0; i < countries.length; i++) {
-    if (ans === countries[i]) {
-      alert('Correct!');
-      scoreKeeper++;
-      guessesLeft = 0;
-      break;
+//Seventh question
+function qSeven() {
+  var countries = ['india', 'belgium', 'france'];
+  var guessesLeft = 6;
+  var name = prompt('What is your name, please?');
+
+  alert('Let\'s play a game.  Guess a country Chris has visited.');
+  while (guessesLeft > 0) {
+    var ans = prompt('Take a guess.').toLowerCase();
+    for (var i = 0; i < countries.length; i++) {
+      if (ans === countries[i]) {
+        alert('Correct!');
+        scoreKeeper++;
+        guessesLeft = 0;
+        break;
+      }
+    }
+    if (guessesLeft > 0) {
+      guessesLeft--;
+      if (guessesLeft === 0) {
+        alert('You are out of guesses.  The possible answers are france, belgium, and india.');
+        break;
+      }
+      alert('No, guess again. You have ' + guessesLeft + ' guesses left.');
     }
   }
-  if (guessesLeft > 0) {
-    guessesLeft--;
-    if (guessesLeft === 0) {
-      alert('You are out of guesses.  The possible answers are france, belgium, and india.');
-      break;
-    }
-    alert('No, guess again. You have ' + guessesLeft + ' guesses left.');
-  }
+
 }
+qSeven();
+
 //scorekeeper code
 alert('You got ' + scoreKeeper + ' out of 7 correct, ' + name + '.');
