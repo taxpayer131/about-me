@@ -78,23 +78,12 @@
 //   alert('Sorry! His favorite number is ' + correctNum);
 // }
 //Seventh question
-var guess;
-var counter = 1;
-var correctNum = 4;
+countries = [India, Belgium, France];
+ans = prompt('You have six tries to guess a country Chris has visited.');
 
-while (number !== correctNum && counter <= 4) {
-  name = prompt('Hi, what\'s your name?');
-  console.log('user name', name);
-
-  if (number < correctNum) {
-    alert('Too low');
-    counter++;
-  } else if (number > correctNum) {
-    alert('Too high');
-    counter++;
-  } else {
-    alert('That\'s right! You guessed it in ' + counter + ' tries.');
-    rightAnswers++;
-    break;
+while (guessesLeft > 0){
+  var ans = prompt('Guess again!');
+  for (var i = 0; i < countries.length; i++);
+  if (ans === countries[i]){
+    alert('Correct!');
   }
-}
