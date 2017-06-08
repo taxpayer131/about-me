@@ -45,26 +45,32 @@ function qThree() {
 qThree();
 
 // //fourth question
-var it = prompt('Does Chris have experience in information technology (IT)?').toUpperCase();
-if (it === 'YES' || it === 'Y') {
-  alert('Correct!');
-  scoreKeeper++;
+function qFour() {
+  var it = prompt('Does Chris have experience in information technology (IT)?').toUpperCase();
+  if (it === 'YES' || it === 'Y') {
+    alert('Correct!');
+    scoreKeeper++;
+  }
+  else {
+    alert('Incorrect!  Chris has has extensive experience in IT.');
+  }
+  console.log('Answer to the question of whether or not Chris has IT exp is ' + it);
 }
-else {
-  alert('Incorrect!  Chris has has extensive experience in IT.');
-}
-console.log('Answer to the question of whether or not Chris has IT exp is ' + it);
+qFour();
 
 //fifth question
-var car = prompt('Does Chris own a car?').toUpperCase();
-if (car === 'NO' || car === 'N') {
-  alert('Correct!');
-  scoreKeeper++;
+function qFive() {
+  var car = prompt('Does Chris own a car?').toUpperCase();
+  if (car === 'NO' || car === 'N') {
+    alert('Correct!');
+    scoreKeeper++;
+  }
+  else {
+    alert('Incorrect!  Chris does not own a car.');
+  }
+  console.log('Answer to the question of Chris owning a car is ' + car);
 }
-else {
-  alert('Incorrect!  Chris does not own a car.');
-}
-console.log('Answer to the question of Chris owning a car is ' + car);
+qFive();
 
 //Sixth question
 var guess;
