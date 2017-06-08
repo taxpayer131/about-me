@@ -59,16 +59,16 @@ console.log('Answer to the question of Chris owning a car is ' + car);
 //Sixth question
 var guess;
 var counter = 1;
-var correctNum = 4;
+var number = 4;
 number = parseInt(prompt('What is Chris\'s favorite number between 0 and 20?'));
-while (number !== correctNum && counter <= 4) {
+while (guess !== number && counter <= 4) {
   console.log('number guess', number);
   console.log('counter', counter);
 
-  if (number < correctNum) {
+  if (number < number) {
     alert('Too low');
     counter++;
-  } else if (number > correctNum) {
+  } else if (number > number) {
     alert('Too high');
     counter++;
   } else {
@@ -79,11 +79,12 @@ while (number !== correctNum && counter <= 4) {
 }
 console.log('counter', counter);
 if (counter > 4) {
-  alert('Sorry! His favorite number is ' + correctNum);
+  alert('Sorry! His favorite number is ' + number);
 }
 //Seventh question
 var countries = ['india', 'belgium', 'france'];
 var guessesLeft = 6;
+var name = prompt('What is your name, please?');
 
 alert('Let\'s play a game.  Guess a country Chris has visited.');
 while (guessesLeft > 0) {
@@ -106,4 +107,4 @@ while (guessesLeft > 0) {
   }
 }
 //scorekeeper code
-alert('You got ' + scoreKeeper + ' out of 7 Correct.');
+alert('You got ' + scoreKeeper + ' out of 7 correct, ' + name + '.');
