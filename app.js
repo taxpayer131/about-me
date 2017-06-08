@@ -78,12 +78,22 @@
 //   alert('Sorry! His favorite number is ' + correctNum);
 // }
 //Seventh question
-countries = [India, Belgium, France];
+countries = ['India', 'Belgium', 'France'];
 ans = prompt('You have six tries to guess a country Chris has visited.');
+var guessesLeft = 6;
 
 while (guessesLeft > 0){
   var ans = prompt('Guess again!');
   for (var i = 0; i < countries.length; i++);
   if (ans === countries[i]){
     alert('Correct!');
+    guessesLeft = 0;
+    break;
   }
+if (guessesLeft > 0){
+  alert('No, guess again.');
+guessesLeft--;
+if (guessesLeft === 0){
+  
+}
+}
