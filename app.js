@@ -17,26 +17,32 @@ function qOne() {
 qOne();
 
 // second question
-var marriage = prompt('Is Chris married?').toUpperCase();
-if (marriage === 'YES' || marriage === 'Y') {
-  alert('Correct!');
-  scoreKeeper++;
+function qTwo() {
+  var marriage = prompt('Is Chris married?').toUpperCase();
+  if (marriage === 'YES' || marriage === 'Y') {
+    alert('Correct!');
+    scoreKeeper++;
+  }
+  else {
+    alert('Incorrect!  Chris is married.');
+  }
+  console.log('Answer to the question or being married or not is ' + marriage);
 }
-else {
-  alert('Incorrect!  Chris is married.');
-}
-console.log('Answer to the question or being married or not is ' + marriage);
+qTwo();
 
 // third question
-var dev = prompt('Does Chris want to be a developer?').toUpperCase();
-if (dev === 'YES' || dev === 'Y') {
-  alert('Correct!');
-  scoreKeeper++;
+function qThree() {
+  var dev = prompt('Does Chris want to be a developer?').toUpperCase();
+  if (dev === 'YES' || dev === 'Y') {
+    alert('Correct!');
+    scoreKeeper++;
+  }
+  else {
+    alert('Incorrect!  Chris is re-training himself to become a developer.');
+  }
+  console.log('Answer to the question of Chris wanting to be a developer is ' + dev);
 }
-else {
-  alert('Incorrect!  Chris is re-training himself to become a developer.');
-}
-console.log('Answer to the question of Chris wanting to be a developer is ' + dev);
+qThree();
 
 // //fourth question
 var it = prompt('Does Chris have experience in information technology (IT)?').toUpperCase();
