@@ -73,30 +73,34 @@ function qFive() {
 qFive();
 
 //Sixth question
-var guess;
-var counter = 1;
-var number = 4;
-number = parseInt(prompt('What is Chris\'s favorite number between 0 and 20?'));
-while (guess !== number && counter <= 4) {
-  console.log('number guess', number);
-  console.log('counter', counter);
+function qSix() {
+  var guess;
+  var counter = 1;
+  var number = 4;
+  number = parseInt(prompt('What is Chris\'s favorite number between 0 and 20?'));
+  while (guess !== number && counter <= 4) {
+    console.log('number guess', number);
+    console.log('counter', counter);
 
-  if (number < number) {
-    alert('Too low');
-    counter++;
-  } else if (number > number) {
-    alert('Too high');
-    counter++;
-  } else {
-    alert('That\'s right! You guessed it in ' + counter + ' tries.');
-    scoreKeeper++;
-    break;
+    if (number < number) {
+      alert('Too low');
+      counter++;
+    } else if (number > number) {
+      alert('Too high');
+      counter++;
+    } else {
+      alert('That\'s right! You guessed it in ' + counter + ' tries.');
+      scoreKeeper++;
+      break;
+    }
+  }
+  console.log('counter', counter);
+  if (counter > 4) {
+    alert('Sorry! His favorite number is ' + number);
   }
 }
-console.log('counter', counter);
-if (counter > 4) {
-  alert('Sorry! His favorite number is ' + number);
-}
+qSix();
+
 //Seventh question
 var countries = ['india', 'belgium', 'france'];
 var guessesLeft = 6;
