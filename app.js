@@ -52,14 +52,39 @@
 // console.log('Answer to the question of Chris owning a car is ' + car);
 //
 //Sixth question
+// var guess;
+// var counter = 1;
+// var correctNum = 4;
+//
+// while (number !== correctNum && counter <= 4) {
+//   number = parseInt(prompt('What is Chris\'s favorite number between 0 and 20?'));
+//   console.log('number guess', number);
+//   console.log('counter', counter);
+//
+//   if (number < correctNum) {
+//     alert('Too low');
+//     counter++;
+//   } else if (number > correctNum) {
+//     alert('Too high');
+//     counter++;
+//   } else {
+//     alert('That\'s right! You guessed it in ' + counter + ' tries.');
+//     rightAnswers++;
+//     break;
+//   }
+// }
+// console.log('counter', counter);
+// if (counter > 4) {
+//   alert('Sorry! His favorite number is ' + correctNum);
+// }
+//Seventh question
 var guess;
 var counter = 1;
 var correctNum = 4;
 
 while (number !== correctNum && counter <= 4) {
-  number = parseInt(prompt('What is Chris\'s favorite number between 0 and 20?'));
-  console.log('number guess', number);
-  console.log('counter', counter);
+  name = prompt('Hi, what\'s your name?');
+  console.log('user name', name);
 
   if (number < correctNum) {
     alert('Too low');
@@ -72,9 +97,4 @@ while (number !== correctNum && counter <= 4) {
     rightAnswers++;
     break;
   }
-}
-
-console.log('counter', counter);
-if (counter > 4) {
-  alert('Sorry! His favorite number is ' + correctNum);
 }
