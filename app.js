@@ -1,77 +1,80 @@
-'use strict';
+// 'use strict';
+//
+// //
+// // first question
+// var child = prompt('Does Chris have children?').toUpperCase();
+// if (child === 'YES' || child === 'Y') {
+//   alert("Correct!");
+// }
+// else {
+//   alert('Incorrect!  Chris has one son.');
+// }
+// console.log("Answer to the question of having children is " + child);
+//
+// // second question
+// var marriage = prompt('Is Chris married?').toUpperCase();
+// if (marriage === 'YES' || marriage === 'Y') {
+//   alert("Correct!");
+// }
+// else {
+//   alert('Incorrect!  Chris is married.');
+// }
+// console.log("Answer to the question or being married or not is " + marriage);
+//
+// // third question
+// var dev = prompt('Does Chris want to be a developer?').toUpperCase();
+// if (dev === 'YES' || dev === 'Y') {
+//   alert("Correct!");
+// }
+// else {
+//   alert('Incorrect!  Chris is re-training himself to become a developer.');
+// }
+// console.log("Answer to the question of Chris wanting to be a developer is " + dev);
+//
+// //fourth question
+// var it = prompt('Does Chris have experience in information technology (IT)?').toUpperCase();
+// if (it === 'YES' || it === 'Y') {
+//   alert("Correct!");
+// }
+// else {
+//   alert('Incorrect!  Chris has has extensive experience in IT.');
+// }
+// console.log("Answer to the question of whether or not Chris has IT exp is " + it);
+//
+// // fifth question
+// var car = prompt('Does Chris own a car?').toUpperCase();
+// if (car === 'NO' || car === 'N') {
+//   alert('Correct!');
+// }
+// else {
+//   alert('Incorrect!  Chris does not own a car.');
+// }
+// console.log('Answer to the question of Chris owning a car is ' + car);
 
+var guess;
+var counter = 1;
+var correctNum = 4;
 
-// first question
-var child = prompt('Does Chris have children?').toUpperCase();
-if (child === 'YES' || child === 'Y') {
-  alert("Correct!");
-}
-else {
-  alert('Incorrect!  Chris has one son.');
-}
-console.log("Answer to the question of having children is " + child);
+while (number !== correctNum && counter <= 4) {
+  number = parseInt(prompt('What is Chris\'s favorite number between 0 and 20?'));
+  console.log('number guess', number);
+  console.log('counter', counter);
 
-// second question
-var marriage = prompt('Is Chris married?').toUpperCase();
-if (marriage === 'YES' || marriage === 'Y') {
-  alert("Correct!");
-}
-else {
-  alert('Incorrect!  Chris is married.');
-}
-console.log("Answer to the question or being married or not is " + marriage);
-
-// third question
-var dev = prompt('Does Chris want to be a developer?').toUpperCase();
-if (dev === 'YES' || dev === 'Y') {
-  alert("Correct!");
-}
-else {
-  alert('Incorrect!  Chris is re-training himself to become a developer.');
-}
-console.log("Answer to the question of Chris wanting to be a developer is " + dev);
-
-//fourth question
-var it = prompt('Does Chris have experience in information technology (IT)?').toUpperCase();
-if (it === 'YES' || it === 'Y') {
-  alert("Correct!");
-}
-else {
-  alert('Incorrect!  Chris has has extensive experience in IT.');
-}
-console.log("Answer to the question of whether or not Chris has IT exp is " + it);
-
-// fifth question
-var car = prompt('Does Chris own a car?').toUpperCase();
-if (car === 'NO' || car === 'N') {
-  alert('Correct!');
-}
-else {
-  alert('Incorrect!  Chris does not own a car.');
-}
-console.log('Answer to the question of Chris owning a car is ' + car);
-
-//Sixth question
-var guess = prompt('Guess a number.  You have four tries.');
-var random = Math.floor(Math.random() * 20 + 1); // Generates a random number between 0 and 20
-
-if (guess === random){ //this comparison checks the user's guess vs. the chosen number.
-  alert('You got it - nice job!');
-  console.log('The user correctly guessed the chosen number in the first attempt.');
-}
-else {
-
-  while (guess != random){
-    for(i = 0; i < 4; i++) {
-      if(guess > random) {
-        var guess = prompt('You guessed too high.  Guess again.');
-      } else {
-        var guess = prompt('You guessed too low.  Guess again.');
-      }
-    }
+  if (number < correctNum) {
+    alert('Too low');
+    counter++;
+  } else if (number > correctNum) {
+    alert('Too high');
+    counter++;
+  } else {
+    alert('That\'s right! You guessed it in ' + counter + ' tries.');
+    rightAnswers++;
+    break;
   }
 }
 
-// var step;
-// for (step = 0; step < 5; step++) {
-// Runs 5 times, with values of step 0 through 4.
+console.log('counter', counter);
+if (counter > 4) {
+  alert('Sorry! His favorite number is ' + correctNum);
+}
+//Sixth question
