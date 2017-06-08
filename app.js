@@ -2,15 +2,19 @@
 
 var scoreKeeper = 0; //Variable set for the scorekeeper on questions 1-7.
 // first question
-var child = prompt('Does Chris have children?').toUpperCase();
-if (child === 'YES' || child === 'Y') {
-  alert('Correct!');
-  scoreKeeper++;
+
+function qOne() {
+  var child = prompt('Does Chris have children?').toUpperCase();
+  if (child === 'YES' || child === 'Y') {
+    alert('Correct!');
+    scoreKeeper++;
+  }
+  else {
+    alert('Incorrect!  Chris has one son.');
+  }
+  console.log('Answer to the question of having children is ' + child);
 }
-else {
-  alert('Incorrect!  Chris has one son.');
-}
-console.log('Answer to the question of having children is ' + child);
+qOne();
 
 // second question
 var marriage = prompt('Is Chris married?').toUpperCase();
