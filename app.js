@@ -78,22 +78,25 @@
 //   alert('Sorry! His favorite number is ' + correctNum);
 // }
 //Seventh question
-countries = ['India', 'Belgium', 'France'];
-ans = prompt('You have six tries to guess a country Chris has visited.');
+var countries = ['india', 'belgium', 'france'];
 var guessesLeft = 6;
 
-while (guessesLeft > 0){
-  var ans = prompt('Guess again!');
-  for (var i = 0; i < countries.length; i++);
-  if (ans === countries[i]){
-    alert('Correct!');
-    guessesLeft = 0;
-    break;
+alert('Let\'s play a game.  Guess a country Chris has visited.');
+while (guessesLeft > 0) {
+  var ans = prompt('Take a guess.').toLowerCase();
+  for (var i = 0; i < countries.length; i++) {
+    if (ans === countries[i]) {
+      alert('Correct!');
+      guessesLeft = 0;
+      break;
+    }
   }
-if (guessesLeft > 0){
-  alert('No, guess again.');
-guessesLeft--;
-if (guessesLeft === 0){
-  
-}
+  if (guessesLeft > 0) {
+    guessesLeft--;
+    if (guessesLeft === 0) {
+      alert('You are out of guesses.  The possible answers are france, belgium, and india.');
+      break;
+    }
+    alert('No, guess again. You have ' + guessesLeft + ' guesses left.');
+  }
 }
