@@ -7,11 +7,15 @@ body  {
 }
 
 header  {
-  border: dashed 2px;
   text-align: center;
 }
 
 img {
     display: block;
     margin: auto;
+}
+
+footer  {
+  float: left;
+  display: auto;
 }
