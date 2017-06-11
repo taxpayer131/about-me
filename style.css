@@ -16,6 +16,10 @@ img {
 }
 
 footer  {
-  float: left;
-  display: auto;
+  float: right;
+  margin: auto;
+}
+
+#social-links {
+  float:left;
 }
