@@ -1,4 +1,17 @@
-*  {
-  background: #E3E6F9;
-  font-size: 28px;
+body  {
+  background-color: #E9EBF7;
+  color: #333;
+  font-family: Helvetica,sans-serif;
+  width: auto;
+  font-size: 13px;
+}
+
+header  {
+  border: dashed 2px;
+  text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
 }
